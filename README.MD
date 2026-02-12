@@ -23,7 +23,7 @@ This exercise simulates a Software Architect's approach to real-world business r
 
 ### 📊 Flowchart
 
-![alt text](image.pnggg)
+![alt text](image.png)
 
 
 > **Architectural Note:** The flow ensures that the system state is checked before any high-level functionality is executed, preventing logical bypasses.
