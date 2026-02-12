@@ -1,102 +1,89 @@
-# HandsOn C# - Developer Games
+# 🕹️ HandsOn C# - Developer Games
 
 ---
 
-### Exercises
+### 🎯 Exercises Objectives
+* **Organization:** Structuring code within proper namespaces and methods to avoid "spaghetti code".
+* **Variable Manipulation:** Handling system states using boolean logic for access control.
+* **Optimization:** Ensuring efficient input detection and clean execution flows.
 
-Objetivo:
+---
 
-Organização;
-Manipulação de variáveis;
-Otimização;
+### 🔒 Phase 2: The "Security Lock" Challenge (Business Logic)
 
-Phase 2: The "Security Lock" Challenge (Business Logic)
+This exercise simulates a Software Architect's approach to real-world business rules, specifically mimicking a "Seat (1/1)" access error.
 
-This is where you start thinking like a Software Architect. Let's simulate the Seat (1/1) error you had on the website.
+* **The Task:** Implement a boolean variable `hasActiveLicense` initialized as `false`.
+* **The Actions:** 1. **Activation:** Pressing the **L** key sets the license to `true`.
+    2. **Access:** Pressing the **C** key (Customize) allows entry only if the license is active.
+    3. **Error Handling:** If unauthorized, the system must trigger a "Seat Unavailable" warning.
+* **The Objective:** Master conditional statements ($if/else$) applied to daily business logic requirements.
 
-The Task: Add a boolean variable `hasActiveLicense` (starts as false).
+---
 
-The Action: 1. Pressing the L key activates the license (true).
+### 📊 Flowchart
 
-2. Pressing the C key (for Customize) should only print "Accessing Character Creator" if the license is true.
+![alt text](image-1.png)
 
-3. If it is false, it should print "Error: Seat Unavailable".
+> **Architectural Note:** The flow ensures that the system state is checked before any high-level functionality is executed, preventing logical bypasses.
 
-The Objective: To practice conditional statements (if/else) applied to a real business rule from your daily work.
+---
 
+### ✅ Resolution Summary
 
-### Flowchart
+The primary goal is to validate a license to grant access permission. Without a valid state, the system remains locked, preventing unauthorized use of resources.
 
-
-![alt text](image.png)
-
-
-### Resolução
-
-O objetivo é validar uma licença para que se tenha permissão de acesso, se não, não há acesso.
-
-
-
-Resposta:
+#### **Implementation Code:**
 
 ```csharp
-
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-namespace  ValidaçãoDeLiceças { 
+
+namespace LicenseValidation 
+{ 
     public class SeatsManager : MonoBehaviour
     {
-        // Initial
-        [SerializeField()]
-        private bool LicenceActive; // LogicVar
+        // Initial State
+        [Header("Security Settings")]
+        [SerializeField] private bool isLicenseActive; // Logic variable for state management
 
-        public KeyCode keyTrue = KeyCode.L; // ControlVar
-        public KeyCode keyAcess = KeyCode.C; // ControlVar
-        
+        [Header("Input Controls")]
+        public KeyCode activationKey = KeyCode.L; // Key to grant license
+        public KeyCode accessKey = KeyCode.C;     // Key to attempt access
+       
         void Update()
         {
-          ValidateLicence();
+            HandleLicenseInput();
         }
 
-        
         // Methods 
-        public void ValidateLicence()
+        public void HandleLicenseInput()
         {
-            if (Input.GetKeyDown(keyTrue))
+            // Action 1: Activate License
+            if (Input.GetKeyDown(activationKey))
             {
-                LicenceActive = true;
-
-                Debug.Log("Licença Liberada");
-            }
-            if (Input.GetKeyDown(keyAcess))
-            {
-                ValidateWithLicence();
+                isLicenseActive = true;
+                Debug.Log("License Granted/Released");
             }
 
-
+            // Action 2: Check for Access attempt
+            if (Input.GetKeyDown(accessKey))
+            {
+                ExecuteAccessValidation();
+            }
         }
 
-        public void ValidateWithLicence()
+        public void ExecuteAccessValidation()
         {
-            if (LicenceActive)
+            // Business Logic Check
+            if (isLicenseActive)
             {
-                Debug.Log("Welcome");
+                Debug.Log("Access Authorized: Welcome!");
             }
             else
             {
-                Debug.Log("You need licence to greated");
+                Debug.LogWarning("Error: Seat Unavailable. License required to proceed.");
             }
-
-
         }
-            
-        
     }
 }
-
-```
-
-
