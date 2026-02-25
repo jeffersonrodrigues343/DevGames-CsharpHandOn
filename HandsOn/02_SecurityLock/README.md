@@ -1,6 +1,6 @@
 
 
-###  Phase 2: The "Security Lock" Challenge (Business Logic)
+##  Phase 2: The "Security Lock" Challenge (Business Logic)
 
 This exercise simulates a Software Architect's approach to real-world business rules, specifically mimicking a "Seat (1/1)" access error.
 
@@ -14,7 +14,7 @@ This exercise simulates a Software Architect's approach to real-world business r
 
 ### Flowchart
 
-![alt text](image.png)
+[alt text](image.png)
 
 
 > **Architectural Note:** The flow ensures that the system state is checked before any high-level functionality is executed, preventing logical bypasses.
