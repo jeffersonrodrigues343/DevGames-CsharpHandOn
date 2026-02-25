@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-# Phase 2: The "Security Lock" Challenge (Business Logic)
-=======
-
 
 ##  Phase 2: The "Security Lock" Challenge (Business Logic)
->>>>>>> 9dc30f8606b4e3cfb5a80838555b6e2353e4b75a
 
 This exercise simulates a Software Architect's approach to real-world business rules, specifically mimicking a "Seat (1/1)" access error.
 
@@ -19,9 +14,8 @@ This exercise simulates a Software Architect's approach to real-world business r
 
 ## Core Business Logic
 
-<<<<<<< HEAD
 The snippet below highlights the access validation method. Without a valid `true` state, the system remains locked, preventing unauthorized use of resources.
-=======
+
 [alt text](image.png)
 
 
@@ -34,7 +28,7 @@ The snippet below highlights the access validation method. Without a valid `true
 The primary goal is to validate a license to grant access permission. Without a valid state, the system remains locked, preventing unauthorized use of resources.
 
 #### **Implementation Code:**
->>>>>>> 9dc30f8606b4e3cfb5a80838555b6e2353e4b75a
+
 
 ```csharp
 public void ExecuteAccessValidation()
