@@ -18,7 +18,7 @@ This module simulates a financial tracking system, managing cumulative donations
 
 ## Flowchart
 
-![My Diagram](05_DonationTracker/Tracker.png).
+![Flowchart](Tracker.png)
 
 
 
@@ -52,6 +52,6 @@ private float CalculateProgress()
 
 Mathematical Formula: 
     
-![Alt text](Assets/Docs/Diagrams/Percentage.png)
+![Fórmula Matemática](../Assets/Docs/Diagrams/Percentage.png)
 
 Note: The complete working script, including the UI string interpolation, is available in DonationTracker.cs.
