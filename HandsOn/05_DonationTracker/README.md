@@ -52,6 +52,6 @@ private float CalculateProgress()
 
 Mathematical Formula: 
     
-![Fórmula Matemática](../Assets/Docs/Diagrams/Percentage.png    )
+![Fórmula Matemática](Percentage.png)
 
 Note: The complete working script, including the UI string interpolation, is available in DonationTracker.cs.
