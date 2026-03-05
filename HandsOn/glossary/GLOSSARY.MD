@@ -1,7 +1,7 @@
 
 # Summary
 
-- [How This Work ?](#https://github.com/jeffersonrodrigues343/DevGames-CsharpHandOn/blob/main/HandsOn/glossary/GLOSSARY.MD#how-this-work)
+- [How This Work ?](#section-1)
 - [What's Namespace and Class? ](#section-2)
 #
 
