@@ -1,6 +1,7 @@
 
 ## Fase 7: O Desafio do "Sistema de Inventário" (POO)
 
+## Flowchart 
 
 ![Flowchart](DiagramaDeClasses.jpg)
 
