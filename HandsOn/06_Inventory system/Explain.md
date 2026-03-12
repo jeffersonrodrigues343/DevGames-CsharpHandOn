@@ -1,12 +1,8 @@
-Aqui está a sua anotação documentada exatamente nessa estrutura arquitetural.
-
-Este é o formato perfeito para você copiar, colar no seu Obsidian (na pasta `02_Recursos`), e o seu GitHub fazer o backup automaticamente.
-
----
 
 ## Fase 7: O Desafio do "Sistema de Inventário" (POO)
 
-Este exercício simula a abordagem de um Arquiteto de Software para regras de estruturação do mundo real, especificamente modelando uma fundação de itens escalável e à prova de falhas para o projeto *AutismyVR*.
+
+![Flowchart](DiagramaDeClasses.jpg)
 
 ### Contexto & Objetivo
 
