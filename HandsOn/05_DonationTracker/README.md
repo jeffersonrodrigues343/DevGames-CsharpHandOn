@@ -1,4 +1,4 @@
-# Phase 5: Recourse & Donation Tracker
+# Phase 6: Recourse & Donation Tracker
 
 This module simulates a financial tracking system, managing cumulative donations against a predefined goal and calculating the progress percentage.
 
@@ -18,7 +18,7 @@ This module simulates a financial tracking system, managing cumulative donations
 
 ## Flowchart
 
-![Flowchart](Tracker.png)
+![Flowchart](DiagramaDeClasses.jpg)
 
 
 
