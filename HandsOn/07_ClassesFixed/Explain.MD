@@ -1,7 +1,7 @@
 #Fase 7: Diagrama de Classes - Fixando o Conteúdo (OOB)
 
 **Data:**  12.03.26 | **Matéria:** Diagrama De Classes
-
+  
 ---
 
 | **DIAGRAMA DE CLASSES**                                                                                                                                                                                                                                                                                                | Na Prática                                                                                                                                                                                          |
@@ -18,4 +18,4 @@
 |                                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                     |
 |                                                                                                                                                                                                                                                                                                                        | Cada inimigo tem uma base a mesma base (enemy), porém, podemos ter diferenciais, uma ordem genérica, porém cada objeto entede de sua forma. Isso se chama **Polimorfismo**.                         |
 
-![Flowchart]()
+![imagem](Pasted image 20260312205800.png))
