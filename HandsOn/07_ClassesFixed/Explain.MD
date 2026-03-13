@@ -8,14 +8,14 @@
 | :--- | :--- |
 | **O que é ?** <br><br>É a nossa planta baixa. Antes de tudo, eu sou um arquiteto de sistemas. Então, eu tenho que planejar, aplicar e executar. | **Anatomia De Um Diagrama:**<br><br>Quando vamos desenhar um diagrama fazemos um triângulo divido em 3 partes: |
 | **Quando usar?**<br><br>Assim como qualquer planta, antes mesmo de sair escrevendo o código.<br><br>Para não precisarmos escrever o mesmo código 500 vezes, separamos em classes. | <br>1. **Topo (Nome) -->** Um nome (Ex: Inimigo) <br><br>2. **Meio(Atributos) -->** O que tem? <br>(Ex: Variáveis?)<br><br><br>3. **Base(Métodos) -->** Qual ação? (Ex: atacar? defender?)<br><br> |
-| **Pai/ Mãe**<br><br>**Lógica**: Não repita!<br><br>**O que é ?**<br><br>Para não ficar rescrevendo código, criamos uma classe que vai ter a base para que outras, na qual nomeamos como filha1,filho2 etc.. receba os mesmos atributos, metodos ou até podem ser atribuidos novas regras. <br><br><br>**Quando usar?** | ![Diagrama](.Pasted%20image%2020260312190507.png) |
+| **Pai/ Mãe**<br><br>**Lógica**: Não repita!<br><br>**O que é ?**<br><br>Para não ficar rescrevendo código, criamos uma classe que vai ter a base para que outras, na qual nomeamos como filha1,filho2 etc.. receba os mesmos atributos, metodos ou até podem ser atribuidos novas regras. <br><br><br>**Quando usar?** | ![Diagrama](Pasted%20image%2020260312190507.png) |
 | Uma funcionalidade, como criar 50 inimigos diferentes. Pois bem, pela lógica, todos eles tem algo em comum assim como qualquer tipo de objeto tem alguma semelhança.. seja aberturas, formato etc.. | Nós temos uma classe<br><br>**Nome**: Inimigo<br>**Atributos**: vida e escudo<br>**Método**: ataque()<br><br> |
 | **Onde a mágica do Polimorfismo brilha:** Se o seu jogo mandar a ordem genérica `Atacar()`, o sistema é inteligente o suficiente para saber quem é quem na memória RAM. O Herói vai puxar a espada e o Inimigo vai usar as garras, sem você precisar escrever nenhum `if`.<br> | **Exemplo De Uso:**<br><br>Queremos ter vários inimigos diferentes, <br><br>Lobo, esqueleto, zumbi, metamorfo |
 | | **O que eles tem em comum?**<br><br>Todos fazem parte mesma classe (Enemy) eles tem a mesma lógica, o que pode mudar é armas, mágias etc... <br><br> |
 | | **Exemplo De Diagrama:**<br><br>**Tema: 5 inimigos**<br> |
-| | ![Inimigos](.Pasted%20image%2020260312205800.png) |
+| | ![Inimigos](Pasted%20image%2020260312205800.png) |
 | | **Inimigos**: zombie, goblin, metamorfo, demon, esqueleto |
 | | |
 | | Cada inimigo tem uma base a mesma base (enemy), porém, podemos ter diferenciais, uma ordem genérica, porém cada objeto entede de sua forma. Isso se chama **Polimorfismo**. |
 
-![Inimigos](.Pasted%20image%2020260312205800.png)
+![Inimigos](Pasted%20image%2020260312205800.png)
