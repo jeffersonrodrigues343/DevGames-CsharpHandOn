@@ -3,7 +3,8 @@
 
 ## Flowchart 
 
-![Flowchart](DiagramaDeClasses.jpg)
+![Flowchart](![Diagrama de Classes](https://github.com/user-attachments/assets/90424b37-c268-44ab-aa66-90aad6ca3bea)
+)
 
 ### Contexto & Objetivo
 
