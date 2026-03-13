@@ -1,5 +1,4 @@
-  
-  ## Fase 7: Diagrama de Classes - Fixando o Conteúdo (OOB)
+#Fase 7: Diagrama de Classes - Fixando o Conteúdo (OOB)
 
 **Data:**  12.03.26 | **Matéria:** Diagrama De Classes
 
