@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Explain.MD",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Explain"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Explain.MD",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Explain"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +154,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Explain.MD",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Explain"
+              "title": "Outline"
             }
           }
         ]
@@ -185,8 +182,8 @@
   },
   "active": "503a5ee4b99c2b1c",
   "lastOpenFiles": [
-    "Untitled.base",
     "Explain.MD",
+    "Untitled.base",
     "assets/Pasted image 20260312190507.png",
     "assets/Pasted image 20260312205800.png",
     "assets/Pasted image 20260312205709.png"
