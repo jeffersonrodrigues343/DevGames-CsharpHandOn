@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "446403017f8ff696",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b69140d061dc65e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9215d5b22b39aba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "main.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "main"
+            }
+          },
+          {
+            "id": "dc2e9c04f410c6da",
+            "type": "leaf",
+            "state": {
+              "type": "diagram-edit",
+              "state": {
+                "file": "Untitled Diagram.svg"
+              },
+              "icon": "lucide-file",
+              "title": "Untitled Diagram.svg"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "22f00f7c4cd947d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f0ebc067f4333d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6d2eb3ba65ba9352",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "4126b56210606b3c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "35e535766b210b3e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "830cd3f278ba7c40",
+    "type": "split",
+    "children": [
+      {
+        "id": "219789991c58e95b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16da640d31c8b7ec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "main.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for main"
+            }
+          },
+          {
+            "id": "0401124dd9d67a72",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "main.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from main"
+            }
+          },
+          {
+            "id": "5a2edcb81c066a6d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "515e7ddea4b35a86",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1c8edef1b584206d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "main.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of main"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "dc2e9c04f410c6da",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "Characters.meta",
+    "CharacterBase.meta",
+    "Characters/Hero/SwordHero/SwordHero.cs",
+    "Characters/Hero/SwordHero/SwordHero.cs.meta",
+    "Characters/Hero/SwordHero.meta",
+    "Characters/Hero/SwordHero",
+    "Characters/Hero/IamHero.cs",
+    "Characters/Hero",
+    "Characters/Enemy/LevelDamage/LevelDamage.cs.meta",
+    "Characters/Enemy/LevelDamage/LevelDamage.cs",
+    "assets/Exerc08.png",
+    "assets/Exerc08.jpg",
+    "assets/Exec08.jpg",
+    "assets/exer08.png",
+    "Untitled Diagram 1.svg",
+    "main.md",
+    "Untitled Diagram.svg",
+    "assets/Untitled.md"
+  ]
+}
