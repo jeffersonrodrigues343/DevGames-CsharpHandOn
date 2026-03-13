@@ -19,4 +19,4 @@
 |                                                                                                                                                                                                                                                                                                                        |                                                                                                                                                                                                     |
 |                                                                                                                                                                                                                                                                                                                        | Cada inimigo tem uma base a mesma base (enemy), porém, podemos ter diferenciais, uma ordem genérica, porém cada objeto entede de sua forma. Isso se chama **Polimorfismo**.                         |
 
-![[Pasted image 20260312205800.png]]
+![Flowchart]()
