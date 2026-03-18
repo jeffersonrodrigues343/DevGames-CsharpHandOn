@@ -25,12 +25,10 @@
             "id": "dc2e9c04f410c6da",
             "type": "leaf",
             "state": {
-              "type": "diagram-edit",
-              "state": {
-                "file": "Untitled Diagram.svg"
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Untitled Diagram.svg"
+              "title": "New tab"
             }
           }
         ],
@@ -198,6 +196,8 @@
   },
   "active": "dc2e9c04f410c6da",
   "lastOpenFiles": [
+    "main.md",
+    "Untitled Diagram.svg",
     "Untitled.md",
     "Characters.meta",
     "CharacterBase.meta",
@@ -214,8 +214,6 @@
     "assets/Exec08.jpg",
     "assets/exer08.png",
     "Untitled Diagram 1.svg",
-    "main.md",
-    "Untitled Diagram.svg",
     "assets/Untitled.md"
   ]
 }
