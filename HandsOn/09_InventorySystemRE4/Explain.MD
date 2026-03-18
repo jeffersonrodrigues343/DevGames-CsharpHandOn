@@ -19,4 +19,4 @@
 <br><br>
 
 
-![RE4Inventory](/Assets/Docs/Diagrams/InventorySystemRE4.jpg)
+![RE4](/Assets/Docs/Diagrams/InventorySystemRE4.jpg)
