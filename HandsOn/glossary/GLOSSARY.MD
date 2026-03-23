@@ -37,3 +37,23 @@ Data: 23/03/2026 | Matéria: C# Avançado - Métodos vs Eventos
 
 ### Resumo (Summary)
 > A diferença entre um programador Júnior e um Sênior está no controle do **Acoplamento**. Usar *Métodos* para ligar sistemas diferentes cria um código frágil ("espaguete"), onde deletar um objeto quebra o jogo inteiro. Usar *Eventos* (como `UnityEvents` ou `Action` em C#) cria uma arquitetura modular, permitindo que a Loja, a UI, o Áudio e o Jogador funcionem de forma totalmente independente. O Mercante apenas anuncia a abertura da loja; os outros sistemas escutam e reagem por conta própria.
+
+
+
+
+
+# Notas Cornell: A Pegadinha do "Invoke" na Unity
+Data: 23/03/2026 | Matéria: C# Avançado - Sintaxe e Eventos
+
+---
+
+| TÓPICOS / GATILHOS (Cues) | ANOTAÇÕES PRÁTICAS (Notes) |
+| :--- | :--- |
+| **1. O Invoke do MonoBehaviour**<br>*(O Cronômetro)* | É uma função de **tempo**. Ele diz para a engine esperar "X" segundos e depois rodar um *método*.<br>• *Sintaxe:* `Invoke("NomeDoMetodo", 4f);`<br>• *O Problema:* Ele exige o nome do método em texto (String Mágica). Se você mudar o nome do método depois, o texto não atualiza sozinho e o jogo quebra silenciosamente.<br>• *Dica de Sênior:* Para evitar o erro do texto, usamos `nameof(NomeDoMetodo)`, que converte o nome real em texto com segurança. |
+| **2. O Invoke do UnityEvent**<br>*(O Megafone)* | É a função de **disparo imediato** de um evento. Ele não tem nada a ver com tempo. Ele apenas pega a variável do evento e grita: "Aconteceu!".<br>• *Sintaxe:* `meuEvento.Invoke();`<br>• *Como funciona:* Ele varre a lista de todo mundo que está escutando aquele evento e manda todos executarem suas ações na mesma hora. |
+| **O Escudo Protetor: `?.`**<br>*(Null-Conditional Operator)* | Se você disparar um evento que não tem ninguém escutando (A lista está vazia / Null), a Unity dá erro de `NullReferenceException`.<br>• *A Solução:* Colocar uma interrogação antes do ponto.<br>• *Sintaxe:* `meuEvento?.Invoke();`<br>• *Tradução:* "Dispare o evento, **SE** a lista de ouvintes não for nula". |
+
+---
+
+### Resumo (Summary)
+> Na Unity, a palavra `Invoke` tem dois significados completamente diferentes dependendo de *quem* está chamando. Se você chama direto no script (`Invoke()`), é um **timer** (cronômetro) para rodar um método no futuro. Se você chama a partir de uma variável de evento (`onShopOpened.Invoke()`), é um **gatilho** imediato para avisar outros sistemas (UI, Áudio, etc.) que uma ação acabou de acontecer, seguindo a arquitetura de baixo acoplamento.
