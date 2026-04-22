@@ -9,13 +9,13 @@
 
 ---
 
-# 📓 Dossiê Técnico: Unity Addressables no Launcher
+#  Dossiê Técnico: Unity Addressables no Launcher
 **Data:** 20/04/26
 **Assunto:** Otimização de Transição de Cenas e UX para Realidade Virtual (VR)
 
 ---
 
-## 📂 1. O Papel do Addressables no Launcher
+##  1. O Papel do Addressables no Launcher
 A principal função do sistema de Addressables aqui é gerenciar a **Transição de Cenas** de forma assíncrona, eliminando gargalos de performance.
 
 | Tópicos (Cues) | Anotações (Notes) |
@@ -23,17 +23,17 @@ A principal função do sistema de Addressables aqui é gerenciar a **Transiçã
 | **Jeito Tradicional** | Utiliza `SceneManager.LoadScene`. <br> - **I.** O jogo é congelado (Freeze). <br> - **II.** Não há autonomia para criar uma tela de loading fluida. |
 | **Jeito Addressables** | Utiliza `Addressables.LoadSceneAsync`. <br> - **I.** Carregamento em segundo plano. <br> - **II.** Sem congelamento do processo principal. <br> - **III.** Permite animações de loading independentes. |
 
-### 📊 Fluxo de Carregamento: Tradicional vs. Addressables
+###  Fluxo de Carregamento: Tradicional vs. Addressables
 ```mermaid
 graph TD
     subgraph "Fluxo Tradicional (Síncrono)"
-        T1[Inicia LoadScene] --> T2[❄️ FREEZE / Bloqueio de Thread]
+        T1[Inicia LoadScene] --> T2[ FREEZE / Bloqueio de Thread]
         T2 --> T3[Tela Travada]
         T3 --> T4[Cena Carregada]
     end
 
     subgraph "Fluxo Addressables (Assíncrono)"
-        A1[Inicia LoadSceneAsync] --> A2[🔄 Background Loading]
+        A1[Inicia LoadSceneAsync] --> A2[ Background Loading]
         A2 --> A3[📺 Animações de Loading Fluidas]
         A3 --> A4[Cena Pronta / Ativação VR]
     end
@@ -41,14 +41,14 @@ graph TD
 
 ---
 
-## ⚙️ 2. Setup na Unity & Empacotamento
+##  2. Setup na Unity & Empacotamento
 Para que uma cena seja carregada via Addressables, ela precisa ser preparada no Editor da Unity.
 
 | Etapa | Ação no Editor |
 | :--- | :--- |
 | **Cena -> Gameplay VR** | 1. Selecionar o arquivo da Cena. <br> 2. Marcar a caixa de seleção **Addressable** no Inspector. <br> 4. Renomear o endereço (Address) para algo simples e identificável via código. |
 
-### 📊 Fluxo de Configuração
+###  Fluxo de Configuração
 ```mermaid
 flowchart LR
     A[Selecionar Cena] --> B[Ativar Flag 'Addressable']
@@ -58,7 +58,7 @@ flowchart LR
 
 ---
 
-## 💻 3. Implementação em C# (Namespaces)
+##  3. Implementação em C# (Namespaces)
 Para manipular estas transições via script, os seguintes namespaces são essenciais:
 
 ```csharp
@@ -74,14 +74,14 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 ---
 
-## 🏥 4. Visão do Produto (Caso de Uso: Terapia VR)
+##  4. Visão do Produto (Caso de Uso: Terapia VR)
 A implementação técnica visa atender a uma necessidade específica da experiência clínica.
 
 | O que a Terapeuta quer ver? | Impacto no Paciente |
 | :--- | :--- |
 | 1. Escolha do ambiente no PC. <br> 2. Início imediato da sessão VR. <br> 3. Tela de carregamento informativa. | **Fluidez:** Evita quebras de imersão. <br> **Acessibilidade:** Gestão de cena simplificada. <br> **Experiência:** Reduz o desconforto visual durante o carregamento. |
 
-### 📊 Jornada do Usuário (Sessão VR)
+### Jornada do Usuário (Sessão VR)
 ```mermaid
 sequenceDiagram
     autonumber
@@ -98,7 +98,7 @@ sequenceDiagram
 
 ---
 
-### 📝 Resumo Consolidado
+###  Resumo Consolidado
 A transição com **Addressables** permite gerenciar cenas de forma mais flexível e visualmente agradável. Ao destruir a cena do launcher e carregar a gameplay em segundo plano, o sistema **libera memória RAM** e permite a **ativação automática do VR** sem interromper a fluidez da aplicação, garantindo uma melhor experiência clínica para o paciente.
 
 
