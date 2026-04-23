@@ -7,6 +7,7 @@
 
 ---
 
+<<<<<<< HEAD
 <a id="addressables"></a>
 # Dossiê Técnico: Unity Addressables (O Jeito Fácil de Entender)
 **Data:** 23/04/2026
@@ -15,11 +16,22 @@
 ---
 
 ## 1. O que é esse tal de Addressables?
+=======
+#  Dossiê Técnico: Unity Addressables no Launcher
+**Data:** 20/04/26
+**Assunto:** Otimização de Transição de Cenas e UX para Realidade Virtual (VR)
+
+---
+
+##  1. O Papel do Addressables no Launcher
+A principal função do sistema de Addressables aqui é gerenciar a **Transição de Cenas** de forma assíncrona, eliminando gargalos de performance.
+>>>>>>> 1841a87486795ceee1e48c2838d0eeaa8f8b4d86
 
 Imagina que o seu jogo é um **Restaurante Gigante**:
 - **O jeito antigo (Resources / Arrastar pro Inspector):** Você guarda TODOS os ingredientes (texturas, sons, modelos 3D) dentro da pequena cozinha (sua Memória RAM) o tempo todo. A cozinha fica absurdamente lotada, a tela congela e o jogo demora muito pra abrir!
 - **O jeito Addressables:** Você guarda os ingredientes em um **Armazém Infinito** maravilhosamente organizado (pode ser no seu HD ou até num servidor da nuvem). Quando o cliente pede uma "Espada Mágica", você manda uma mensagem pro Armazém pelo "Endereço" (Address) dela. Um motoboy pega ela e traz só na hora que você precisar!
 
+<<<<<<< HEAD
 **Vantagem Máxima:** O seu jogo abre super rápido, a tela não tem mais aqueles travamentos (congelamentos) chatos, e você não esgota a memória do celular/PC do seu jogador!
 
 ### Fluxo do Restaurante (Como funciona)
@@ -34,12 +46,32 @@ graph TD
         AD1[Seu Código Pede: 'Quero o Hambúrguer X!'] --> AD2[Addressables Procura o 'Endereço Y']
         AD2 --> AD3[O Asset é Carregado de Fundo]
         AD3 --> AD4[O item aparece e o jogo continuou rodando Liso!]
+=======
+###  Fluxo de Carregamento: Tradicional vs. Addressables
+```mermaid
+graph TD
+    subgraph "Fluxo Tradicional (Síncrono)"
+        T1[Inicia LoadScene] --> T2[ FREEZE / Bloqueio de Thread]
+        T2 --> T3[Tela Travada]
+        T3 --> T4[Cena Carregada]
+    end
+
+    subgraph "Fluxo Addressables (Assíncrono)"
+        A1[Inicia LoadSceneAsync] --> A2[ Background Loading]
+        A2 --> A3[📺 Animações de Loading Fluidas]
+        A3 --> A4[Cena Pronta / Ativação VR]
+>>>>>>> 1841a87486795ceee1e48c2838d0eeaa8f8b4d86
     end
 ```
 
 ---
 
+<<<<<<< HEAD
 ## 1.5. Onde ele fica e O que ele guarda? (Ajustando os Mitos)
+=======
+##  2. Setup na Unity & Empacotamento
+Para que uma cena seja carregada via Addressables, ela precisa ser preparada no Editor da Unity.
+>>>>>>> 1841a87486795ceee1e48c2838d0eeaa8f8b4d86
 
 Se voce entendeu que o Addressables e como um "Armazem de Entregas", e preciso ter clareza perfeita sobre dois pontos:
 
@@ -55,6 +87,7 @@ O sistema foi feito para gerenciar "Assets" (Texturas, Musicas, Modelos 3D, Fase
 
 | Termo Esquisito | O que significa de verdade? (Exemplo Bobo) |
 | :--- | :--- |
+<<<<<<< HEAD
 | **Address (Endereço)** | É literalmente o nome/CEP da sua encomenda. Em vez de arrastar o modelo 3D pro seu script, você agora só grita pelo nome: _"Espada_de_Fogo"_, _"Musica_do_Chefe"_. |
 | **AssetReference** | É uma caixinha de correio vazia no Inspector do seu script onde você clica e escolhe o que quer. Funciona como um "Voucher do Ifood": não é a comida, é só a garantia de que ela vai ser pedida depois. |
 | **Load / Instantiate Async (Assíncrono)** | A Palavra Mágica. Significa "Carrega essa parada de fundo enquanto eu faço outra coisa". Você pede a pizza e vai jogar videogame até ela chegar. O jogo nunca trava pra esperar! |
@@ -67,6 +100,22 @@ O sistema foi feito para gerenciar "Assets" (Texturas, Musicas, Modelos 3D, Fase
 ## 3. Como usar no Código? (Comentado Passo a Passo)
 
 Para o motoboy do delivery funcionar:
+=======
+| **Cena -> Gameplay VR** | 1. Selecionar o arquivo da Cena. <br> 2. Marcar a caixa de seleção **Addressable** no Inspector. <br> 4. Renomear o endereço (Address) para algo simples e identificável via código. |
+
+###  Fluxo de Configuração
+```mermaid
+flowchart LR
+    A[Selecionar Cena] --> B[Ativar Flag 'Addressable']
+    B --> C[Simplificar Endereço / String ID]
+    C --> D[Pronto para chamadas C#]
+```
+
+---
+
+##  3. Implementação em C# (Namespaces)
+Para manipular estas transições via script, os seguintes namespaces são essenciais:
+>>>>>>> 1841a87486795ceee1e48c2838d0eeaa8f8b4d86
 
 ```csharp
 using UnityEngine;
@@ -103,7 +152,20 @@ public class CaixaMagica : MonoBehaviour
 }
 ```
 
+<<<<<<< HEAD
 ### Fluxo de Comunicação e Segurança (Como não explodir a memória)
+=======
+---
+
+##  4. Visão do Produto (Caso de Uso: Terapia VR)
+A implementação técnica visa atender a uma necessidade específica da experiência clínica.
+
+| O que a Terapeuta quer ver? | Impacto no Paciente |
+| :--- | :--- |
+| 1. Escolha do ambiente no PC. <br> 2. Início imediato da sessão VR. <br> 3. Tela de carregamento informativa. | **Fluidez:** Evita quebras de imersão. <br> **Acessibilidade:** Gestão de cena simplificada. <br> **Experiência:** Reduz o desconforto visual durante o carregamento. |
+
+### Jornada do Usuário (Sessão VR)
+>>>>>>> 1841a87486795ceee1e48c2838d0eeaa8f8b4d86
 ```mermaid
 sequenceDiagram
     autonumber
@@ -124,7 +186,12 @@ sequenceDiagram
 
 ---
 
+<<<<<<< HEAD
 ## 4. Visão de Sênior: O que ele faz nos bastidores?
+=======
+###  Resumo Consolidado
+A transição com **Addressables** permite gerenciar cenas de forma mais flexível e visualmente agradável. Ao destruir a cena do launcher e carregar a gameplay em segundo plano, o sistema **libera memória RAM** e permite a **ativação automática do VR** sem interromper a fluidez da aplicação, garantindo uma melhor experiência clínica para o paciente.
+>>>>>>> 1841a87486795ceee1e48c2838d0eeaa8f8b4d86
 
 O Addressables não serve apenas para deixar o carregamento escondido. Para quem trabalha fazendo jogos gigantes, ele resolve os tres maiores pesadelos dos programadores.
 
