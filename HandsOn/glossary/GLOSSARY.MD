@@ -1,4 +1,4 @@
-# 📚 Índice (Summary)
+#  Índice (Summary)
 
 - [Unity Addressables (O Jeito Fácil de Entender)](#addressables)
 - [Module C# Intermediate](#module-cs)
