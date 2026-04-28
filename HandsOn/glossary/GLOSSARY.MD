@@ -219,10 +219,85 @@ graph TD
 
 ## **What's Namespace And Class?**
 
+# 📅 Quarta-Feira, 04/12/26
 
-![image1](assets/middle.png)
-![image1](assets/last.png)
-![image1](assets/first.png)
+## O que é? NAMESPACE
+É uma pasta **INVISÍVEL** para organizar os projetos.
+
+### A Lógica
+Imagina que a gente na Unity tem um script chamado `MESA`, e então decidimos criar um namespace com o mesmo nome. O que será que vai ocorrer?
+
+**VAMOS TER CONFLITO.**
+
+```mermaid
+graph TD
+    A[Script C#] -->|Nome| C(MESA)
+    B[Namespace] -->|Nome| C(MESA)
+    C -->|Gera| D{CONFLITO DE COMPILADOR!}
+    
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#f66,stroke:#fff,stroke-width:4px,color:#fff
+```
+
+---
+
+### Resumindo: Na Vida Real
+Temos dois indivíduos chamados Jefferson. O que diferencia esses dois Jeffersons? 
+**O SOBRENOME!** *(O sobrenome age como o Namespace na programação)*.
+
+```mermaid
+graph TD
+    subgraph Familia_Silva [Namespace: Silva]
+        J1((Jefferson))
+    end
+    
+    subgraph Familia_Santos [Namespace: Santos]
+        J2((Jefferson))
+    end
+    
+    J1 -.->|Diferente de| J2
+```
+
+---
+
+## CLASSES
+
+### O que são?
+É a nossa **planta**.
+> *Projeto -> forma de bolo*
+
+### Quando usamos?
+Para não precisar ficar recriando código quando é com a mesma funcionalidade.
+
+### A Lógica:
+Um inimigo tem?
+* Vida
+* Escudo
+* Nome
+
+```mermaid
+classDiagram
+    class Inimigo {
+        +int Vida
+        +int Escudo
+        +string nome
+    }
+    
+    %% Representando a "Forma de Bolo" (Classe) gerando os bolos (Objetos)
+    Inimigo ..> Inimigo_Fogo : Instância (Objeto)
+    Inimigo ..> Inimigo_Gelo : Instância (Objeto)
+```
+
+---
+
+## EXERCÍCIO
+
+**Quais seriam as classes do sistema Donation Tracker?**
+
+~~SISTEMA DE DOAÇÃO~~
+* ~~A arrecadação~~
+* ~~O arrecadado~~
+* ~~meta~~
 
 
 ## **Complemented By Exercise 09_InventorySystemRE4**
