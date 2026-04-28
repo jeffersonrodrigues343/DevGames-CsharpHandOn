@@ -215,12 +215,6 @@ graph TD
 <a id="module-cs"></a>
 # Module C# intermediate 
 
-## **How this work?**
-
-## **What's Namespace And Class?**
-
-# 📅 Quarta-Feira, 04/12/26
-
 ## O que é? NAMESPACE
 É uma pasta **INVISÍVEL** para organizar os projetos.
 
